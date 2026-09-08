@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
       home: MyHomePage(),
     );
   }
@@ -21,8 +23,6 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
-
-  final String _currentFortune = "";
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -67,8 +67,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Get Fortune"),
             ),
 
-            Text(
-              ("Your Fortune for today is: "),
+            const Text(
+              "Your Fortune for today is: ",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Card(
