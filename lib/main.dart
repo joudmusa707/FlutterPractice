@@ -55,7 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("hello"),
+            Image.asset(
+              "assets/images/fortune_cookie.jpg",
+              width: 200,
+              height: 200,
+              fit: BoxFit.cover,
+            ),
+
             ElevatedButton(
               onPressed: _randomFortune,
               child: Text("Get Fortune"),
